@@ -33,7 +33,7 @@ const apiUrl = 'https://authenticationtask-production.up.railway.app'; // Update
 
         if (!response.ok) {
             console.error('Registration failed:', response.status);
-            document.getElementById('regMessage').innerText = `Registration failed. Please try again.`;
+            document.getElementById('regMessage').textContent = `Registration failed. Please try again.`;
             return;
             
         
@@ -41,7 +41,7 @@ const apiUrl = 'https://authenticationtask-production.up.railway.app'; // Update
       }
 
       const data = await response.json();
-      document.getElementById('regMessage').innerText = data.message;
+      document.getElementById('regMessage').textContent = data.message;
       
 
       
