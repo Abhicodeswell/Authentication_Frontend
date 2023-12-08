@@ -31,15 +31,19 @@ const apiUrl = 'https://authenticationtask-production.up.railway.app'; // Update
         body: JSON.stringify({ username, email, password }),
       });
 
+        if (!response.ok) {
+            document.getElementById('regMessage').innerText = 'Registration failed. Please try again.';
+        
+        
+      }
+
       const data = await response.json();
       document.getElementById('regMessage').innerText = data.message;
+      showLoginForm();
 
       
 
-      // if (response.ok) {
-        
-      //   showLoginForm();
-      // }
+      
     }
 
     async function loginUser() {
