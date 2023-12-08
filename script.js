@@ -41,6 +41,7 @@ const apiUrl = 'https://authenticationtask-production.up.railway.app'; // Update
       }
 
       const data = await response.json();
+      console.log(data);
       document.getElementById('regMessage').textContent = data.message;
       
 
